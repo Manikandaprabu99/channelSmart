@@ -1,0 +1,26 @@
+form{
+    width: 420px;
+}
+
+.container{
+    height: 100xh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button{
+    width: 41%;
+    background-color: #f47b22!important;
+   border-color: azure;
+    text-transform: uppercase;
+    
+}
+
+.signup{
+    padding: 0%!important;
+    text-align: left;
+   
+}
+
+

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light" style="background-color:rgb(34,63,92)">
+
+    <div class="container1">
+        <a class="navbar-brand" style="color: #fff;" href="#">
+            <img alt width="
+            10%" class="mr-2"  src=
+    "https://apiqa.channelsmart.net/v1.0/logo"
+                 />Channel Smart
+        </a>
+    </div>
+    </nav>
+    
+
+    
+
+<div class="container">
+    <form class="p-3 rounded-3" [formGroup]="aForm" (ngSubmit)="submitted()">
+
+      <br>
+      <h2 class="fs-3" class="account">Account Activation</h2>
+      <br>
+          <div class="row">
+            <div class="col mb-3">
+              <label for="text" class="form-label">User name</label>
+              <input type="text" placeholder="Enter your username here" class="form-control" formControlName="username" >
+              <div class="form-text text-danger" *ngIf="UserName.errors?.['required'] && (UserName.dirty || UserName.touched)">User Name is Required.</div>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col mb-3">
+              <label for="text" class="form-label">Activation Code</label>
+              <input type="text" placeholder="Enter Activation Code" class="form-control"  formControlName="code">
+              <div class="form-text text-danger" *ngIf="Code.errors?.['required'] && (Code.dirty || Code.touched)">Activation code is Required.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col mb-3">
+              <div class="d-grid">
+              <button type="submit" [disabled]="aForm.invalid" class="btn btn-primary" id="button">Submit</button>
+            </div>
+          </div>
+        </div>
+            </form>
+         
+
+</div>

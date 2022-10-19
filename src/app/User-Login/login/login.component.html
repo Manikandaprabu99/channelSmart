@@ -1,0 +1,61 @@
+
+<nav class="navbar navbar-light" style="background-color:rgb(34,63,92)">
+
+<div class="container1">
+    <a class="navbar-brand" style="color: #fff;" href="#">
+        <img alt width="
+        10%" class="mr-2"  src=
+"https://apiqa.channelsmart.net/v1.0/logo"
+             />Channel Smart
+    </a>
+</div>
+</nav>
+
+
+
+
+
+<div class="container">
+    <form class="p-3 rounded-3" [formGroup]="loginForm" (ngSubmit)="submitted()">
+
+      <br>
+      <h2 class="fs-3" class="login">Login</h2>
+      <br>
+          <div class="row">
+            <div class="col mb-3">
+              <label for="text" class="form-label">User name</label>
+              <input type="text" class="form-control" placeholder="Enter your username here"  formControlName="username">
+              <div class="form-text text-danger" *ngIf="UserName.errors?.['required'] && (UserName.dirty || UserName.touched)">User Name is Required.</div>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="Enter your password here"   formControlName="password">
+              <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.dirty || Password.touched)">Password is Required.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col mb-3">
+              <div class="d-grid">
+              <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary" id="button">Login</button>
+            </div>
+          </div>
+        </div>
+        <label class="d-flex mb-3">
+            <a routerLink="account" href="account" style="text-decoration:none;">Account Activation</a>
+        </label>
+        <label class="d-flex mb-3">
+            <a href="password" style="text-decoration:none;" routerLink="password">Forgot Password?</a>
+        </label>
+        <label class="d-flex mb-3">
+            <a routerLink="signup" href="signup" style="text-decoration:none;">First Install</a>
+        </label>
+            </form>
+         
+
+</div>
+
+
